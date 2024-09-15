@@ -16,7 +16,7 @@ This project is a backend system for an intergalactic trade network. It handles 
    ```bash
    git clone https://github.com/vishu1100/intergalactic-trade-network.git
    cd intergalactic-trade-network
-Sure, Vishvesh! Let's go through the detailed steps to add the remote repository to your project.
+
 
 ### Adding the Remote Repository
 
@@ -56,14 +56,14 @@ Sure, Vishvesh! Let's go through the detailed steps to add the remote repository
    git remote add origin https://github.com/yourusername/intergalactic-trade-network.git
    ```
 
-#### 5. **Push Your Project to GitHub**
-1. Push your local repository to GitHub:
+#### 5. **Push Project to GitHub**
+1. Push local repository to GitHub:
    ```bash
    git push -u origin main
    ```
 
 ### Example Commands
-Here's a summary of the commands you'll run in your terminal:
+Here's a summary of the commands  terminal:
 
 ```bash
 cd path
