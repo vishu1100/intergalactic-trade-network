@@ -14,7 +14,7 @@ This project is a backend system for an intergalactic trade network. It handles 
 ## Setup Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/intergalactic-trade-network.git
+   git clone https://github.com/vishu1100/intergalactic-trade-network.git
    cd intergalactic-trade-network
 Sure, Vishvesh! Let's go through the detailed steps to add the remote repository to your project.
 
