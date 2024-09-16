@@ -1,3 +1,26 @@
+# Intergalactic Trade Network intergalactic-trade-network/
+├── src/
+│   ├── routes/
+│   │   ├── trades.js
+│   │   ├── cargo.js
+│   │   └── inventory.js
+│   ├── controllers/
+│   │   ├── tradesController.js
+│   │   ├── cargoController.js
+│   │   └── inventoryController.js
+│   ├── models/
+│   │   ├── trade.js
+│   │   ├── cargo.js
+│   │   └── inventory.js
+│   ├── index.js
+│   └── config/
+│       └── db.js
+├── test/
+│   ├── api.test.js
+├── package.json
+└── README.md
+
+
 # Intergalactic Trade Network
 
 ## Project Overview
@@ -16,54 +39,77 @@ This project is a backend system for an intergalactic trade network. It handles 
    ```bash
    git clone https://github.com/vishu1100/intergalactic-trade-network.git
    cd intergalactic-trade-network
-
-
-### Adding the Remote Repository
-
-#### 1. **Create a New Repository on GitHub**
-1. Go to [GitHub](https://github.com/) and log in to your account.
-2. Click on the **+** icon in the top right corner and select **New repository**.
-3. Fill in the repository name (e.g., `intergalactic-trade-network`), add a description if you like, and choose whether the repository should be public or private.
-4. Click **Create repository**.
-
-#### 2. **Initialize Git in Your Project Folder**
-1. Open your terminal or command prompt.
-2. Navigate to your project directory:
-   ```bash
-   cd path/to/your/project
    ```
 
-3. Initialize a new Git repository:
+2. **Install dependencies**:
    ```bash
-   git init
+   npm install
    ```
 
-#### 3. **Add Your Project Files to the Repository**
-1. Add all your project files to the Git staging area:
+3. **Start the server**:
    ```bash
-   git add .
+   node src/index.js
    ```
 
-2. Commit the files with a message:
+4. **Access the API documentation**:
+   Open your browser and navigate to `http://localhost:3000/api-docs`.
+
+## Deployment Instructions
+1. **Choose a cloud provider** (e.g., AWS, Render).
+2. **Follow the provider's instructions** to deploy your project.
+   - **Build Command**: `npm install`
+   - **Start Command**: `node src/index.js`
+   - **Environment Variables**:
+     - `PORT`: `3000`
+     - `REDIS_URL`: `redis://<your-redis-url>`
+
+## API Endpoints
+- **POST /api/trades**: Initiate a new trade transaction.
+- **GET /api/trades/{transactionId}**: Retrieve details of a trade transaction.
+- **POST /api/cargo**: Create a new cargo shipment.
+- **GET /api/cargo/{shipmentId}**: Retrieve cargo shipment details.
+- **GET /api/inventory/{stationId}**: Retrieve inventory levels for a space station.
+- **GET /api/data/{id}**: Retrieve cached data for a given ID.
+
+## Real-Time Updates
+- **WebSocket Endpoint**: `/real-time-update`
+  - Connect to this endpoint to receive real-time updates on trade volume and active shipments.
+
+## Known Limitations and Potential Improvements
+- **Limitations**:
+  - The current implementation uses simulated data for real-time updates.
+  - Error handling and logging can be improved.
+
+- **Potential Improvements**:
+  - Implement a real database for persistent storage.
+  - Enhance security measures.
+  - Optimize performance for high traffic.
+
+## Testing
+1. **Run tests**:
    ```bash
-   git commit -m "Initial commit"
+   npx mocha test/api.test.js
    ```
 
-#### 4. **Add the Remote Repository**
-1. Copy the URL of your GitHub repository. It should look something like this: `https://github.com/yourusername/intergalactic-trade-network.git`.
-2. Add the remote repository:
+## Contributing
+1. **Fork the repository**.
+2. **Create a new branch**:
    ```bash
-   git remote add origin https://github.com/yourusername/intergalactic-trade-network.git
+   git checkout -b feature-branch
    ```
-
-#### 5. **Push Project to GitHub**
-1. Push local repository to GitHub:
+3. **Make your changes** and **commit them**:
    ```bash
-   git push -u origin main
+   git commit -m "Add new feature"
    ```
+4. **Push to the branch**:
+   ```bash
+   git push origin feature-branch
+   ```
+5. **Create a pull request**.
 
-### Example Commands
-Here's a summary of the commands  terminal:
+## License
+This project is licensed under the MIT License.
 
-```bash
-cd path
+## Contact
+For any questions or suggestions, please contact [vishaveshmishra0@gmail.com].
+
